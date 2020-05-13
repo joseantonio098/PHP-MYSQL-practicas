@@ -1,0 +1,48 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Formulario-Envío </title>
+    <link rel="stylesheet" href="fontawesome-free-5.13.0-web/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="contenedor-form">
+        <form action="formulario.php" method="post">
+
+            <div class="form-titulo">
+                <p> Contacto </p>
+            </div>
+
+            <div class="form-nombre">
+                <label for="nombre"> <i class="fas fa-user"></i> </label>
+                <input type="text" class="nombre" id="nombre" name="nombre" placeholder="Nombre" value="">
+            </div>
+
+            <div class="form-correo">
+                <label for="correo"><i class="fas fa-envelope"></i></label>
+                <input type="email" class="correo" id="correo" name="correo" placeholder="Correo" value="">
+            </div>
+
+            <div class="form-asunto">
+                <label for="asunto"><i class="fas fa-pencil-alt"></i></label>
+                <input type="text" class="asunto" id="asunto" name="asunto" placeholder="Asunto" value="">
+            </div>
+
+            <div class="form-mensaje">
+                <label for="mensaje"><i class="far fa-envelope"></i></label>
+                <textarea class="mensaje" id="mensaje" name="mensaje" placeholder="Escriba su mensaje..."></textarea>
+            </div>
+
+            <div class="btn-enviar">
+                <input type="submit" class="boton" name="enviar" value="Enviar">
+            </div>
+            
+        </form>
+    </div>
+
+</body>
+</html>
