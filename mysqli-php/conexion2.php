@@ -9,23 +9,21 @@ if ( $conexion->connect_errno ){ // ---> Comprobar si hay un error con la conexi
 
 } else {
 
-    $sql = 'SELECT * FROM usuarios LIMIT 4';
+    $id = isset($_GET['id']) ? $_GET['id'] : 1; // ---> Insertando 'ID' de forma dinámica
+
+    $sql = "SELECT * FROM usuarios WHERE ID = $id";
     $resultado = $conexion->query($sql);  // ---> Ejecutamos la conexión(Consulta)
 
     // ---> Mostrando resultados en pantalla de la base de datos
     if( $resultado->num_rows ){ // ---> Muestra el Número de filas  
 
-        // $fila = $resultado->fetch_assoc(); // ---> Devuelve una fila 
-        // echo $fila['nombre'];  
-
-        while( $fila = $resultado->fetch_assoc() ){  // ---> Mientras hay filas ejecutame el sgte código
-            echo $fila['ID'] . '-' . $fila['nombre'] . '<br>'; // ---> Devuelve todo los datos
+        while( $fila = $resultado->fetch_assoc() ){
+            echo $fila['ID'];
         }
 
     } else {
         echo 'No hay datos';
     }
 }
-
 
 ?>
