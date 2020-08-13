@@ -1,4 +1,5 @@
 <?php
+// 1-----
     error_reporting(0); //Esconde errores
     header('Content-type: application/json; charset=utf-8');
 
@@ -6,9 +7,7 @@
     $conexion = new mysqli('localhost', 'joseantonio098', '', 'ajax');
 
     if($conexion->connect_errno){
-        $respuesta = [
-            'error' => true
-        ];
+        $respuesta = ['error' => true];
     } else {
         $conexion->set_charset("utf8");//Omitir símbolos especiales
         $statement = $conexion->prepare("SELECT * FROM usuarios");
@@ -33,7 +32,8 @@
 
 
     }
-    echo json_encode($respuesta);
+    echo json_encode($respuesta); // Muestra el resultado en pantalla
 
 
+    //Todo este archivo php me arroja un archivo JSON(Array de objetos)
 ?>
