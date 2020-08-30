@@ -1,0 +1,4 @@
+1- Accedemos a la sgte. URL: http://www.fpdf.org/
+2- Descargamos el archivo ZIP v1.82 (07/12/2019)
+3- Descomprimimos --> Archivos Necesarios: (font - makefont - fpdf.php)
+
