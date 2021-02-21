@@ -4,13 +4,13 @@
     header('Content-type: application/json; charset=utf-8');
 
     //BASE DE DATOS MYSQLI -> PREPARED STATEMENT
-    $conexion = new mysqli('localhost', 'joseantonio098', '', 'ajax');
+    $conexion = new mysqli('localhost', 'joseantonio098', '', 'php_practicas');
 
     if($conexion->connect_errno){
         $respuesta = ['error' => true];
     } else {
         $conexion->set_charset("utf8");//Omitir símbolos especiales
-        $statement = $conexion->prepare("SELECT * FROM usuarios");
+        $statement = $conexion->prepare("SELECT * FROM usuarios2");
         $statement->execute();
 
         $resultados = $statement->get_result();

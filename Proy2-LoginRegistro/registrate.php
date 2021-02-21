@@ -20,7 +20,7 @@
         } else {
 
             try{
-                $conexion = new PDO('mysql:host=localhost;dbname=registro_usuarios', 'joseantonio098', '');
+                $conexion = new PDO('mysql:host=localhost;dbname=php_practicas', 'joseantonio098', '');
                 $statement = $conexion->prepare('SELECT * FROM usuarios WHERE usuario = :usuario LIMIT 1');      
                 
                 $statement->execute( array(':usuario' => $usuario) ); //Ejecutamos la conexión

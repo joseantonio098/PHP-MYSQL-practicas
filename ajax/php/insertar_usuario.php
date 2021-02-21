@@ -25,7 +25,7 @@ function validarDatos($nombre,$edad,$pais,$correo){
 if( validarDatos($nombre,$edad,$pais,$correo) == true ){
 
     // Accedemos a la DATABASE mysqli
-    $conexion = new mysqli('localhost','joseantonio098','','ajax');
+    $conexion = new mysqli('localhost','joseantonio098','','php_practicas');
     $conexion->set_charset('utf8');
 
     // Comprueba si hay errores
@@ -33,7 +33,7 @@ if( validarDatos($nombre,$edad,$pais,$correo) == true ){
         $respuesta = ['error' => true]; //1er error ---> Mala conexión con la DATABASE
     }else{
         $statement = $conexion->prepare(
-            "INSERT INTO usuarios(nombre,edad,pais,correo) VALUES(?,?,?,?)");
+            "INSERT INTO usuarios2(nombre,edad,pais,correo) VALUES(?,?,?,?)");
         $statement->bind_param("siss",$nombre,$edad,$pais,$correo);
         $statement->execute();
         

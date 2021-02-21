@@ -15,7 +15,7 @@ if( $_SERVER['REQUEST_METHOD'] == 'POST' ){
     $password = hash('sha512', $password);
 
     try{
-        $conexion = new PDO('mysql:host=localhost;dbname=registro_usuarios', 'joseantonio098', '');
+        $conexion = new PDO('mysql:host=localhost;dbname=php_practicas', 'joseantonio098', '');
         $statement = $conexion->prepare('SELECT * FROM usuarios WHERE usuario = :usuario AND contrasena = :contrasena');      
             
         $statement->execute( array(':usuario' => $usuario, ':contrasena' => $password) ); //Ejecutamos la conexión

@@ -21,7 +21,7 @@
         $conexion = conectar();
         $nombre_ingresado = $_POST['caja_busqueda'];
 
-        $consulta = $conexion->prepare('SELECT Cod_producto, Nombre, Marca, Modelo FROM productos WHERE Nombre LIKE "%":nombre"%" OR  Marca LIKE "%":marca"%" OR Modelo LIKE "%":modelo"%"'); // ---> Establecemos la consulta
+        $consulta = $conexion->prepare('SELECT Cod_producto, Nombre, Marca, Modelo FROM productos2 WHERE Nombre LIKE "%":nombre"%" OR  Marca LIKE "%":marca"%" OR Modelo LIKE "%":modelo"%"'); // ---> Establecemos la consulta
         $consulta->execute(array(':nombre'=>$nombre_ingresado, ':marca'=>$nombre_ingresado, ':modelo'=>$nombre_ingresado)); // ---> Ejecutamos la consulta
 
         $datos = $consulta->fetchAll(); // ---> fetchAll( devuelve todo los "registros" );
@@ -29,7 +29,7 @@
       }else{
         require('conexion.php');
         $conexion = conectar();
-        $consulta = $conexion->prepare('SELECT Cod_producto, Nombre, Marca, Modelo FROM productos'); // ---> Establecemos la consulta
+        $consulta = $conexion->prepare('SELECT Cod_producto, Nombre, Marca, Modelo FROM productos2'); // ---> Establecemos la consulta
         $consulta->execute(); // ---> Ejecutamos la consulta
 
         $datos = $consulta->fetchAll(); // ---> fetchAll( devuelve todo los "registros" );

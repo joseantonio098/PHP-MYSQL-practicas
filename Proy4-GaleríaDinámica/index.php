@@ -10,7 +10,7 @@ $pagina_actual = (isset($_GET['p']) && (int)$_GET['p'] >= 0 ? (int)$_GET['p'] : 
 $inicio = ($pagina_actual > 1) ? $pagina_actual * $fotos_por_pagina - $fotos_por_pagina : 0;
 
 // Establecemos la conexión
-$conexion = conexion('galeria_practica','joseantonio098','');
+$conexion = conexion('php_practicas','joseantonio098','');
 if(!$conexion){
     die();
     //Se recomienda redireccionar a una pagina de error --> 404..

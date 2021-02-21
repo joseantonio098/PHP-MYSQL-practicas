@@ -1,7 +1,7 @@
 <?php 
 
 require 'function.php';
-$conexion = conexion('galeria_practica','joseantonio098','');
+$conexion = conexion('php_practicas','joseantonio098','');
 
 //Si no hay conexión entonces ....
 if(!$conexion){

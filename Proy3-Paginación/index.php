@@ -2,7 +2,7 @@
 
 try{
 
-    $conexion = new PDO('mysql:host=localhost;dbname=paginacion', 'joseantonio098', '');
+    $conexion = new PDO('mysql:host=localhost;dbname=php_practicas', 'joseantonio098', '');
     
     // ---> Estableciendo la página ingresada
     $pagina = isset($_GET['pagina']) ? (int)$_GET['pagina'] : 1;
